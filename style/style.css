@@ -16,15 +16,18 @@
     font-weight: 600;
     cursor: pointer;
 }
+
 .lightgrey-description {
     color: #727272;
     margin-bottom: 30px;
 }
-.section-title{
+
+.section-title {
     font-size: 2.8rem;
     font-weight: 700;
     color: #131313;
 }
+
 /* ////////// */
 
 header {
@@ -75,35 +78,87 @@ nav li a {
     width: 100%;
 }
 
- 
+
 /* main section */
-main{
-    max-width: 1080px; 
+main {
+    max-width: 1080px;
     margin: 70px auto;
 }
-.team-container{
+
+.team-container {
     display: flex;
     align-items: center;
 }
-.image-container{
+
+.image-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.4rem;
 }
-.team-content{
+
+.team-content {
     padding-left: 70px;
     padding-right: 70px;
 }
-.team-title{
+
+.team-title {
     font-size: 2.8rem;
 }
-.quick{
+
+.quick {
     font-weight: 500;
     color: #727272;
 }
-.features{
+
+.features {
     color: #FF900E;
     font-weight: 700;
+}
+
+/* fact section */
+
+.fact-card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+}
+
+.card-stats {
+    color: #424242;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    color: #727272;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* sponsers///////////// */
+
+.sponsers{
+    text-align: center;
+}
+.sponser-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.sponser-img-container img{
+    width: 165px;
 }
 
 /* responsive media queries */
@@ -114,7 +169,10 @@ main{
         padding: 20px;
     }
 
-    nav , .team-container {
+    nav,
+    .team-container ,
+    .fact-card-container,
+    .sponser-img-container{
         flex-direction: column;
     }
 
@@ -122,13 +180,21 @@ main{
         flex-direction: column;
         gap: 20px;
     }
-    .image-container{
+
+    .image-container {
         grid-template-columns: 1fr;
     }
-    .team-content{
-        padding: 20px 20px;
+
+    .team-content,.fact-card-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .fact-card-container{
+        gap: 20px;
     }
 }
+
+
 
 /* tablet devices */
 
@@ -137,8 +203,9 @@ main{
         padding-left: 20px;
         padding-right: 20px;
     }
-    .team-container {
+
+    .team-container,.sponser-img-container {
         flex-direction: column;
     }
-    
+
 }
